@@ -1,0 +1,1970 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.1//EN'
+  'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Lui lei lui</title>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .bold       { font-weight: bold }
+  .small-caps { }
+  .gesperrt   { }
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .center     { text-align: center }
+  .right      { text-align: right }
+  .justify    { text-align: justify }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 1.5em 0 }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-inside: avoid;
+                        page-break-after:  avoid }
+  .titlepage, 
+  #pg-header            { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.noindent   { text-indent: 0 }
+
+  .boxed       { border: 1px solid black; padding: 1em }
+  .topic       { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section  { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils  { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+
+  .clearpage,
+  .cleardoublepage,
+  .vfill,
+  .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* ugly hack to give more specifity. 
+   because ADE chokes on !important */
+  .first.first { margin-top: 0 } 
+  .last.last   { margin-bottom: 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                     { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1 { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2 { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3 { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4 { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5 { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.document-title, 
+  p.document-subtitle     { text-align: center }
+
+  div.titlepage,
+  #pg-header,
+  h1.document-title       { margin: 10% 0 5% 0 }
+  p.document-subtitle     { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  p.attribution           { margin-top: 0; text-align: right }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em 10% }
+  div.caption  { margin: 1.5em 10%; text-align: center; font-style: italic }
+  div.legend   { margin: 1.5em 10% }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin: 3em 0 }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  div.topic {
+  margin: 3em 0 }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+  table.table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table tr.last        { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table.norules tr             { border-width: 0 }
+  table.table.norules td, 
+  table.table.norules th             { padding: 0.5ex 1em }
+  table.table.norules tr.first td    { padding-top: 1ex }
+  table.table.norules tr.last td     { padding-bottom: 1ex }
+  table.table.norules tr.first th    { padding-top: 1ex }
+  table.table.norules tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  tr.footnote.footnote td, tr.footnote.footnote th { 
+  padding: 0 0.5em 1.5em;
+  }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  em                { font-style: normal }
+  strong            { font-weight: normal }
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  .dropcap          { float: left; }
+  span.dropcap      { margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { margin: 0 0.5em 0 0; }
+
+  /* PAGINATION */
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, 
+   .contents, .foreword, .preface, .introduction, .dedication, .prologue,
+   .epilogue, .appendix, .glossary, .bibliography, .index, .colophon,
+   .footnotes, .plainpage
+                      { margin: 10%  0 }
+   .clearpage         { margin: 10% }
+   .cleardoublepage   { margin: 10% }
+   .vfill             { margin:  5% 10% }
+  }
+
+  @media print {
+    /* margin-top disappears after a page-break, thus padding */
+   .frontispiece, .verso, .plainpage, .section.level-2,
+   .clearpage         { page-break-before: always; padding-top: 1px }
+
+   .coverpage, .titlepage, 
+   .contents, .foreword, .preface, .introduction, .dedication, .prologue,
+   .epilogue, .appendix, .glossary, .bibliography, .index, .colophon,
+   .footnotes,
+   .cleardoublepage   { page-break-before: right; padding-top: 1px }
+
+   .vfill             { margin-top: 20% }
+   h2.title           { margin-top: 20% }
+  }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  .pageno       { position: absolute; right: 95%; font: medium sans-serif; }
+  .pageno:after { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref  { float: right }
+  pre           { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+  /*]]>*/
+  </style>
+</head>
+<body>
+  <div class="document" id="lui-lei-lui">
+    <h1 class="document-title level-1 pfirst title">Lui lei lui</h1><!-- -*- encoding: utf-8 -*- -->
+    <div class="container coverpage">
+      <div class="align-center auto-scaled figure" style="margin-left: 24%; width: 51%"><img style="display: block; width: 100%" alt="images/cover.jpg" src="images/cover.jpg" width="100%" /></div>
+    </div>
+    <div class="container titlepage">
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="large">ROBERTO BRACCO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="xx-large">TEATRO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="large">VOLUME PRIMO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          NON FARE AD ALTRI... — <strong class="bold">LUI LEI LUI</strong> —
+        </div>
+        <div class="line">
+          UN'AVVENTURA DI VIAGGIO — UNA DONNA —
+        </div>
+        <div class="line">
+          LE DISILLUSE — DOPO IL VEGLIONE
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="small">2ª EDIZIONE.</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          REMO SANDRON — Editore
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="small">Libraio della Real Casa</span>
+        </div>
+        <div class="line">
+          <span class="small">MILANO-PALERMO-NAPOLI</span>
+        </div>
+      </div>
+    </div>
+    <div class="container verso">
+      <p class="center pfirst">PROPRIETÀ LETTERARIA</p>
+      <blockquote class="small">
+        <div>
+          <p class="pfirst"><em class="italics">I diritti di riproduzione e di traduzione sono riservati per tutti i paesi, non escluso il Regno di Svezia e quello di Norvegia.</em></p>
+          <p class="pnext">È assolutamente proibito di rappresentare questi lavori senza il consenso scritto dell'Autore <em class="italics">(Art. 14 del Testo Unico 17 Settembre 1882)</em>.</p>
+          <p class="pnext">Published in Palermo, 10th. June Privilege of Copyright in the United States reserved under the Act approved March 3rd. 1905, by Roberto Bracco and Remo Sandron.</p>
+          <p class="pnext">Off. Tip. Sandron — 126 — I — 290312.</p>
+        </div>
+      </blockquote>
+    </div>
+    <hr class="docutils" />
+    <div class="clearpage"></div>
+    <div class="center line-block noindent outermost">
+      <div class="line">
+        <span class="x-large">LUI LEI LUI.</span>
+      </div>
+      <div class="line">
+        &nbsp;
+      </div>
+      <div class="line">
+        <span class="italics large">Commedia in un atto.</span>
+      </div>
+    </div>
+    <p class="pfirst">rappresentata per la prima volta al <em class="italics">Sannazaro</em> di <em class="italics">Napoli</em>, dalla Compagnia <span class="small-caps">Pasta</span>, nel 1887.</p>
+    <div class="clearpage"></div>
+    <p class="pnext"><span class="invisible pageno target" title="48" id="page-48"></span> <span class="invisible pageno target" title="49" id="page-49"></span></p>
+    <p class="center large pnext">PERSONAGGI:</p>
+    <blockquote class="small">
+      <div>
+        <div class="large line-block outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>.
+          </div>
+          <div class="line">
+            <span class="small-caps">Clotilde</span>, sua moglie.
+          </div>
+          <div class="line">
+            <span class="small-caps">Federico</span>.
+          </div>
+          <div class="line">
+            <span class="small-caps">Domenico</span>, servo.
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            Epoca attuale.
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pnext"><span class="invisible pageno target" title="50" id="page-50"></span> <span class="invisible pageno target" title="51" id="page-51"></span></p>
+    <div class="level-2 section" id="atto-unico">
+      <h2 class="center level-2 pfirst section-title title">ATTO UNICO.</h2>
+      <p class="pfirst"><em class="italics">Salottino elegante. Armi, coltelli e zaini da caccia alle pareti. Un pianoforte. Due porte laterali. Una porta in fondo, la quale, aperta, incornicia la veduta del parco verdeggiante.</em></p>
+      <div class="level-3 section" id="scena-i">
+        <h3 class="center level-3 pfirst section-title title with-subtitle">SCENA I.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="giulio-poi-il-servo">GIULIO, <em class="italics">poi</em> IL SERVO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(solo, intento ad aggiustare i mazzolini di fiori freschi nei vasi di maiolica)</em> Come sono grazioso, io, in questa delicata operazione di fanciulla quindicenne! Ecco: la primavera mi dà delle gentilezze sopraffine, dei gusti squisiti e poetici, di cui sono io stesso meravigliato. Carino, questo insieme di rose tee e di mughetti! <em class="italics">(Al servo, che entra)</em> Che c'è, Domenico?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Il Servo</span>
+          </div>
+        </div>
+        <p class="pfirst">La signora ha ordinato tutto il pranzo. Soltanto, desidera sapere se lei, come <em class="italics">entre-mets</em>, preferisce i fagiolini al pomodoro o i pisellini al burro.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="52" id="page-52"></span><span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con severità)</em> Ma queste sono cose che non mi riguardano. Voi sapete, Domenico, che io mi rimetto al gusto del mio amico Federico. Andate piuttosto a interrogare lui. È lui, oramai, che si occupa delle cose di casa: ve l'ho detto tante volte! <em class="italics">(Si sdraia sopra una poltrona che è accanto al tavolino coi fiori.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Il Servo</span>
+          </div>
+        </div>
+        <p class="pfirst">C'è poi il commesso del signor Compagnoni. Ha dei saggi di vino da mostrarle, per definire quell'affare.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(svogliato)</em> Dio buono, quale affare?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Il Servo</span>
+          </div>
+        </div>
+        <p class="pfirst">Non so, mi ha detto così.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Sarà forse qualche affare che mi sta trattando il mio amico, quel caro Federico. Dite a lui tutto. <em class="italics">(Chiamando:)</em> Federico! Federico! <em class="italics">(Pausa.)</em> Starà in giardino. Domenico, andate a cercarlo, mostrategli i saggi di vino, chiedetegli se preferisce i fagiolini o non so che altro, e lasciatemi tranquillo. <em class="italics">(Sbadiglia)</em> Ah!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Il Servo</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(va via.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="53" id="page-53"></span><span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(guardando di nuovo i fiori)</em> Carino, carino questo insieme di rose tee e di mughetti! Piacerà certamente anche a mia moglie: mughetti e rose tee: che sfumature! che armonia di colori! Oh la pittura e la botanica! Come le amo! Se avessi fatto il pittore, sarei diventato... il primo botanico del mondo!</p>
+      </div>
+      <div class="level-3 section" id="scena-ii">
+        <h3 class="center level-3 pfirst section-title title with-subtitle">SCENA II.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="federico-e-giulio-poi-il-servo">FEDERICO <em class="italics">e</em> GIULIO, <em class="italics">poi</em> IL SERVO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(entra dalla porta a destra, pian piano, guardando attorno con occhio inquieto, senza esser veduto da Giulio. Ha l'aria turbata, e dal suo volto traspare un misto di malinconia e di timidezza. Avvicinatosi a Giulio, gli mette lievemente una mano sulla spalla.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(alzandosi, voltandosi, squadrandolo da capo a piedi, gli domanda, in un tono fra di fastidio e di sorpresa.)</em> Ohè, dico, che hai?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(dà un profondo sospiro.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Che hai?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="54" id="page-54"></span><span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(facendo un gesto annunziante una deliberazione irremissibilmente presa, dice con voce ferma, che è, però, uno sforzo:)</em> Giulio, ti voglio parlare.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">A me?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, a te.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Dio buono, parliamo sempre, noi, e parliamo tanto che la tua volontà non mi sembra mica una cosa spiccatamente nuova.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Giulio, da un mese io sono in casa tua....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">E puoi aggiungere, con legittimo orgoglio, che completi la mia arcadica felicità. Gli alberi fioriscono, gli augelli garriscono, le farfalle s'inseguono, il ruscelletto mormora, io mangio molto e bene, dormo dolcissimamente, posseggo una moglie che è un tesoretto, posseggo te che sei un amico carissimo: tutto sommato, io sono un uomo felice. Questa è la villeggiatura del mio corpo e del mio spirito! Metti all'occhiello questo bottoncino di rosa, <em class="italics">(glielo dà)</em> e va a passeggiare.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="55" id="page-55"></span><span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Ebbene, Giulio, io li ringrazio, ti ringrazio assai della cordiale ospitalità che hai voluto accordarmi....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Bada: ti permetto anche di ringraziarmi, ma non in questo tono flebile e sentimentale.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, ti ringrazio vivamente, ma....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Ho risoluto: me ne vado!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(scherzando)</em> E chi ti dà il diritto di prendere delle risoluzioni in casa mia?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">No, Giulio, me ne vado sul serio, e me ne vado subito. Vedi, sono venuto appunto a salutarti.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(guardandolo fisso)</em> O sei matto... e allora fai bene ad andartene, o non lo sei... e allora perchè te ne vai?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="56" id="page-56"></span><span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(dopo breve riflessione)</em> Senti: tu hai tanta amicizia per me ed hai tanto spirito per te, che io sarei colpevole e sarei uno sciocco se ti nascondessi la verità.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(in caricatura)</em> Il momento è solenne! Ti ascolto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(dopo lunga reticenza)</em> Giulio, io... io... io amo tua moglie.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con un soprassalto di paura, smettendo l' aria burlesca)</em> E me lo dici in faccia?!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(mortificato)</em> Ho creduto di darti una prova di lealtà, rivelandoti questa mia... solitaria sventura.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(alquanto commosso)</em> Te ne ringrazio! <em class="italics">(Avvicina due seggiole, e, molto amichevolmente, invita Federico a sedere. Siedono.)</em> <em class="italics">(Pausa.)</em> Dunque?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Dunque, me ne vado.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="57" id="page-57"></span><span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Eh! capisco i tuoi... i tuoi... i tuoi....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Ragionamenti.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Ragionamenti! Oh! non c'è dubbio, giustissimi ragionamenti! Certo... non c'è altro mezzo... per....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Per risparmiare al mio cuore mille sofferenze, e a te....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con ansia)</em> A me?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(subito)</em>... lo scrupolo di avermele imposte.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Soltanto questo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Soltanto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(rinfrancato, stringendogli la mano)</em> Sei delicatissimo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="58" id="page-58"></span><span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Credimi, ho lungamente lottato contro il nemico ch'è venuto a turbare la mia felicità, e con grande dolore ho dovuto confessare a me stesso di non averlo saputo vincere. Sulle prime, dopo pochi giorni che io ero qui, con voi, in questo villino fatto a posta per destare i più gentili desiderii, ho sperato, mi sono lusingato....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(titubante)</em> Come sarebbe a dire che ti sei lusingato?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Mi sono lusingato che il nuovo sentimento che nasceva in me, fosse un misto di gratitudine e di amichevole simpatia: fosse, cioè, una doverosa conseguenza delle cortesie usatemi da tua moglie. Ma, che vuoi! Altro che gratitudine! altro che amichevole simpatia! Il quadretto evidente della vostra felicità,... della vostra unione,... della vostra.... come ho da dire?... della vostra intimità,... cagionava in me certi turbamenti, certe strane indicibili smanie, che sono andate, ogni giorno, aumentando, sino a diventare... un martirio.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Oh povero amico mio! Hai ragione, perbacco!... Hai ragione. Quella benedetta Clotilde è così carina!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Carina?! Qualche cosa di più!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="59" id="page-59"></span><span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(entusiasmandosi anche lui)</em> È graziosissima, ne convengo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">E poi è una donna che non somiglia a nessun'altra!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Bravo! A nessun'altra!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">È mite ed è altera.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">È buona ed è furba....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">È gran dama ed è bambina.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Ventidue anni, sai: non più di ventidue!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">È tanto ingenua ed è piena di fascini!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">E che fascini! Se tu sapessi!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="60" id="page-60"></span><span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con calore)</em> Insomma, tu sei un uomo invidiabile, ed io... sono un infelice!</p>
+        <p class="pnext"><em class="italics">(Si alzano. Federico rimane in un canto, nervoso, preoccupato, con la testa bassa.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Il Servo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(entra, vede Federico, va difilato da lui, e gli domanda:)</em> Preferisce i fagiolini al pomodoro o i pisellini al burro?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con uno sgarbo)</em> Oh! non mi seccate, adesso!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(al servo)</em> Andate via, Domenico. Abbiamo certi pisellini per la testa!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Il Servo</span>
+          </div>
+        </div>
+        <p class="pfirst">Vuol dire che oggi faremo a meno dell'<em class="italics">entre-mets</em>. <em class="italics">(Via.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(guardando Federico, che è inquieto, gli si accosta con dolcezza)</em> Via, càlmati.... Tu te ne andrai. Io, capisci, mi annoierò molto senza di te.... Ah! si stava tanto bene in tre! Ma non c'è che fare! Non bisogna essere egoisti. Vedo anch'io che la tua dimora qui, fra noi due, sarebbe per te un <span class="invisible pageno target" title="61" id="page-61"></span>vero supplizio. Finchè si trattasse di amare in silenzio e di serbare nel cuore questo affetto solingo e di frenarlo, reprimerlo, nasconderlo, eh! ti direi: fammi il piacere di rassegnarti e non mi lasciare; ma assistere alle tenerezze che la donna da te amata prodiga quotidianamente a suo marito, no! In verità, questo è superiore alle forze umane. Partenza, dunque, partenza! È doloroso per me, ma per te è necessario. Sei ammalato, e devi guarire.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sospirando)</em> Lo spero! <em class="italics">(Commosso)</em> Mi permetti di abbracciarti?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Fa pure.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(abbracciandolo)</em> Grazie!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(confidenzialmente)</em> E dimmi.... Tu, in qualche momento di allucinazione, di debolezza, di inconscienza — l'amore certe volte fa di questi scherzi! — non le hai fatto capire qualche cosa?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(senza esitare, sinceramente)</em> Mai!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="62" id="page-62"></span><span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con pari ed inconsiderata sincerità)</em> Ti confesso che io, al tuo posto, avrei fatto qualche corbelleria.</p>
+      </div>
+      <div class="level-3 section" id="scena-iii">
+        <h3 class="center level-3 pfirst section-title title with-subtitle">SCENA III.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="clotilde-giulio-federico">CLOTILDE, GIULIO, FEDERICO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(entra dal giardino, canticchiando.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sottovoce a Federico)</em> Lei.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(continuando a parlare con Giulio, sforzandosi di sembrare disinvolto e alzando la voce)</em> Ah! già, sicuro... la giornata è bellissima.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">E tu, ingrato ai benefizi della natura, te ne vai proprio oggi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Chi è, chi è che se ne va?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Io!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="63" id="page-63"></span><span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Lui.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Precisamente. Me ne vado... perchè....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">È naturale... se ne va... perchè... Eh?.... Cosa?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Avete l'aria di due collegiali che abbiano fatto insieme o che contino di fare una qualche scappatella.... Questa partenza improvvisa, questo contegno misterioso.... Andiamo, su, giustificatevi. <em class="italics">(A Federico)</em> Perchè partite? <em class="italics">(A Giulio)</em> E tu, perchè lo lasci partire?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Affari.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Affari, mia cara....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Voi, signor Federico, avete degli affari? Si avvicina la fine del mondo! Il vostro affare più grave e più urgente è stato sempre mio marito.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Non ti dico di no....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="64" id="page-64"></span><span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Ed ora volete abbandonarlo! Volete condannare lui e me a un tête-à-tête campestre, continuo, inevitabile, che potrebbe minare il nostro amore coniugale? Un tête-à-tête obbligato e non mai interrotto può generare facilmente una pericolosa reazione.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Sicchè, per voi due io sono stato sinora....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Un'eccellente interruzione, e quindi un preservativo dell'amore coniugale.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ridendo a malincuore)</em> Ah! Ah! un preservativo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(secondandolo)</em> Ah! ah! un preservativo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(fingendo gaiezza)</em> Signora Clotilde, permettetemi, io vado a preparare le mie valige.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma, in sostanza, che vi abbiamo fatto di male?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="65" id="page-65"></span><span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(spontaneamente)</em> Io, niente!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Allora io?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Voi, anzi....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Come «anzi»?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(impappinandosi)</em> Anzi... appunto... viceversa... ma non crediate... oh, vi pare!... tutt'altro!... Giulio, non è vero?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">È verissimo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">È verissimo che l'aria della campagna produce un triste effetto sui vostri nervi e sulla vostra intelligenza. Partite sì, partite e al più presto possibile! In queste condizioni diventereste insopportabile a voi stesso e a noi!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(convulso, fuori di sè)</em> Oh non temete: parto, fuggo, volo, e non mi vedrete mai più. Mi dimetto da preservativo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="66" id="page-66"></span><span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Fate benissimo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(piano a Giulio)</em> Lo vedi come mi tratta!... <em class="italics">(Via per la porta a destra.)</em></p>
+      </div>
+      <div class="level-3 section" id="scena-iv">
+        <h3 class="center level-3 pfirst section-title title with-subtitle">SCENA IV.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="giulio-e-clotilde">GIULIO <em class="italics">e</em> CLOTILDE</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(rimane come interdetto, a bocca aperta, guardando fisso la porta da cui è uscito Federico.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(stupita, dopo qualche istante di silenzio, come se chiedesse spiegazione)</em> Giulio?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(va fino alla porta per assicurarsi che Federico non possa udire; poi si accosta a Clotilde con circospezione e, fra il grave e il gioviale, le dice a voce bassa:)</em> Vuoi sapere la vera ragione della sua partenza?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Tu hai una voglia matta di dirmela.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="67" id="page-67"></span><span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">E te la dico subito. Federico è innamorato di te!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sorpresa)</em> E sei tu, mio marito, che vieni a raccontarmi queste cose?!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">E perchè no? Che la gente s'innamori di te è un fatto che mi lusinga, e, francamente, non m'impensierisce....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Eh, bada: dicono così tutti i mariti ingannati.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Cattiva! Vorresti rendermi geloso, ma non cavi un ragno dal buco.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Lasciamo stare il ragno, e pensiamo un poco al tuo disgraziato e innamorato amico.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Poverino! Faceva pietà. Mi ha parlato delle lotte dell'animo suo, delle torture che noi due, senza sapere e senza volere, gli abbiamo inflitte, e finalmente ha concluso che solo separandosi da noi <span class="invisible pageno target" title="68" id="page-68"></span>potrebbe ricuperare una certa tranquillità di spirito. Era commosso. Aveva le lagrime agli occhi.... E ha voluto perfino abbracciarmi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Perchè?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Non lo so. Mi ha abbracciato.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(rammaricata)</em> Intanto, eccoci soli.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(rammaricato)</em> Senza un cane che ci tenga compagnia.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">E chi mi suonerà la sera... un approssimativo duetto del «Faust»,... un verosimile valtzer di Strauss... una canzonetta qualunque?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">E con chi andrò a caccia, io?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">E con chi attaccheremo briga tutti e due?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="69" id="page-69"></span><span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Oh! davvero che questo innamoramento è stato un fulmine a ciel sereno.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Restano pensosi.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Giulietto....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Clotilduccia....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Un'idea!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Sentiamo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Non c'è altro espediente che di gettare acqua sul fuoco. In mezz'ora, ci scommetto, io spegnerò la fiamma che strugge il tuo misero ed innocente amico, e renderò un servizio a lui e un altro a noi. Egli resterà.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst">Ottimamente; ma, spegnere?!... Si fa presto a dire.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="70" id="page-70"></span><span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Una donna, che, senza averne nè l'intenzione nè il sospetto, è riuscita a farsi amare, può, molto facilmente riuscire, quando ne abbia la ferma volontà, a farsi odiare.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(invogliato)</em> Odiare?... Qui è inutile giungere sino all'odio. Basta l'indifferenza, basta uno stato... di tranquilla freddezza.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Basta l'indifferenza? Basta uno stato di tranquilla freddezza? Affidalo a me. Farò abbassare io la sua temperatura.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(contento, fregandosi le mani)</em> Sei un demonio, ma sei un angelo. <em class="italics">(Vedendo venire Federico, munito di valige)</em> Ecco l'uomo! Signora Clotilde, noi vi affidiamo il suo cuore e le sue valige. <em class="italics">(Via di corsa dal giardino.)</em></p>
+      </div>
+      <div class="level-3 section" id="scena-v">
+        <h3 class="center level-3 pfirst section-title title with-subtitle">SCENA V.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="clotilde-e-federico">CLOTILDE <em class="italics">e</em> FEDERICO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(comparisce portando con ambo le mani due valige e il cappello. Incontrandosi con Clotilde, resta sconcertato e impacciato.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="71" id="page-71"></span><span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(incrociando le braccia)</em> Mio buon signor Federico, io sono qui.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(appena inchinandosi)</em> Signora....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(dopo una pausa)</em> Partite?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(mostrando le valige)</em> Non lo vedete? Parto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(lo guarda e ride.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(s'inchina di nuovo e sta per andare)</em> Signora....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Ih! che fretta. <em class="italics">(Federico si ferma.)</em> Venite qua. <em class="italics">(Poi, in tono imperativo)</em> Avvicinatevi, vi dico.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(riluttante, s'avvicina a lei.)</em> Eccomi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con un sorrisetto beffardo)</em> Dunque, è tutto un dramma questa vostra partenza repentina?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="72" id="page-72"></span><span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(trasalendo)</em> Un dramma?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, un dramma complicato e terribile, che si riassume in queste cinque parole: mi amate e mi fuggite!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ansioso, meravigliato, mortificato)</em> E chi ve l'ha detto?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Mio marito.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(lasciandosi cascar di mano le valige e il cappello)</em> Lui stesso! <em class="italics">(Resta trasecolato e confuso.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Pausa.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Bisogna convenire che il caso è perfettamente nuovo, e che voi siete un tipo affatto speciale di persona innamorata. Sentite: come moglie del vostro fiducioso amico, via... vi lodo; ma come donna, in fede mia, vi biasimo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Come moglie mi lodate e come donna mi biasimate.... Non capisco.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="73" id="page-73"></span><span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Insomma, mi spiego meglio! Voi, amico, siete, non si può negare, ammirevolissimo: ma voi, uomo, eh! mio caro, voi uomo siete... deplorevole!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sempre confuso)</em> Sono delle distinzioni sottili.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(canzonando)</em> Non mi pare. Sentiamo: definite la parola «uomo».</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(pensando molto)</em> «Uomo... Uomo....» Veramente non trovo una definizione precisa.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Me ne congratulo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Aspettate.... Ne ho letta una pochi giorni fa, in un dizionario. <em class="italics">(Ricordando:)</em> «Uomo» termine generico,... che abbraccia anche la donna.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Voi, invece, abbracciate i mariti delle donne!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Io abbraccio i mariti delle donne?!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="74" id="page-74"></span><span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Mio marito, non lo avete forse voluto abbracciare?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Ah sì, perchè egli che conosce i vostri fascini, mi ha compianto, mi ha consigliato....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Vi siete fatto anche consigliare da lui?! È straordinario!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Siete squisitamente crudele!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">E voi, squisitamente grottesco!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Signora Clotilde, io non pretendo opporre nessuna resistenza agli assalti del vostro spirito. Io mi arrendo, io mi dichiaro vinto, e non vi chiedo che il permesso di partire.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Vi arrendete a me? Ma io mi affretto a cedervi a voi stesso. Vi dichiarate vinto? Ma voi non avete neanche combattuto. Mi chiedete il permesso di partire? Ma io non vi ho chiesto il sacrificio <span class="invisible pageno target" title="75" id="page-75"></span>di restare. Voi potete andare o rimanere come meglio vi aggrada, senza che turbiate menomamente la pace domestica. Se poi credete di dovervi allontanare per salvar me da un pericolo, rassicuratevi: in ogni caso, mi avreste già salvata.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">No, signora Clotilde, voi non mi comprendete. Il pericolo è mio.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">E quale? Temete che mio marito vi sorprenda nell'atto di farmi una dichiarazione d'amore? Questo no, perchè, oramai, mi avete già fatto la vostra dichiarazione, affidandola, anzi, con gentile pensiero, alle cure stesse di mio marito. Temete di innamorarvi più di quanto siate innamorato? E questo nemmeno è possibile, perchè l'amore aumenta o dopo un trionfo o dopo un fiasco; ma voi, che non osate sperare un trionfo, non avete altro scopo che quello di eliminare il fiasco. Voi siete come... come una nave incagliata in un banco di arena: non potete più andare nè innanzi nè indietro, ma non potete essere capovolto dalla tempesta. <em class="italics">(Va a sedere sul divano.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(le si siede accanto, riflettendo)</em>.... Eppure, signora Clotilde, voi, oggi, così atroce, così spietata verso di me, avete, nel vostro linguaggio, qualche cosa che... — vi parrà strano... — quasi preferisco alle gentili cortesie abituali....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="76" id="page-76"></span><span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Buon segno: è la medicina amara che ristora l'infermo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Già! Io mi sento ristorato. Io mi sento meglio. E allora, ve ne prego, continuate, continuate a tormentarmi. Deridetemi, beffeggiatemi, sferzatemi senza misericordia, e quando, all'ultimo, mi avrete completamente guarito, io non vi chiederò più il permesso di partire, ma vi chiederò il permesso di restare! Ecco, se mi aveste trattato sempre così, se foste stata con me sempre scortese, ruvida, sarcastica, impertinente, io forse non mi sarei innamorato di voi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con inconsapevole eccitamento e con accento accelerato)</em> E avreste avuto torto, fanciullo che siete! La cortesia per la donna è una formalità, la dolcezza è una educazione, la bontà... è un'abitudine. Una donna che è con voi buona, dolce, cortese, non fa che rappresentare bene la sua parte di donna. Invece <em class="italics">(nervosa)</em> l'indizio di probabile amore è precisamente uno scatto di collera, un impeto di rabbia, un gesto o una frase di disprezzo, di alterigia, d'impazienza, insomma una nota stridula che dispiace e che piace, un frizzo, una malignità, una cattiveria e sinanche, qualche volta, una insolenza. <em class="italics">(Federico, ascoltando attentamente, le si è accostato a poco a poco, assai dappresso, e, in questo punto, ella, sempre più nervosa, sbuffando, si alza a un tratto e, cambiando tono, aggiunge:)</em> E adesso andate via, e non mi annoiate più!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="77" id="page-77"></span><span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(resta ancora seduto, contemplandola. Poi, lentamente si alza e va a raccogliere il cappello e le valige.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Che fate?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">V'obbedisco.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(bruscamente)</em> Aspettate. Mi obbedirete più tardi. Per ora, cercate di rendervi utile, piacevole, divertente, o almeno tollerabile....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(rimettendo a terra valige e cappello — con modestia)</em> Non sarà facile.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con burbanza crudele non rispondente alla parola)</em> Facilissimo. <em class="italics">(Siede vicino al pianoforte e soggiunge con accento di comando:)</em> Sedete lì, molto lontano da me.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(siede nel punto della stanza più lontano da lei.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Pausa.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="78" id="page-78"></span><span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma voi non dite niente: non parlate, non ridete, non piangete, non suonate?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(subito)</em> Volete che suoni?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì: suonate.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(non si muove.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Avete udito? Ho detto suonate.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Non posso.... Per suonare bisognerebbe che io m'avvicinassi a voi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Dio buono, quante inutili esagerazioni!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(andando in fretta a sedere presso il piano)</em> Va bene, va bene! Siamo perfettamente d'accordo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Suonate... il solito duetto del Faust.... Cioè, no: il duetto del Faust è eccessivamente sentimentale.</p>
+        <p class="pnext"><span class="invisible pageno target" title="79" id="page-79"></span>Suonate piuttosto.... Suonate quello che volete, purchè suoniate male, molto male! Non ho nessuna voglia di commuovermi per la vostra musica.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Suonerò la serenata di Schubert. <em class="italics">(Comincia a suonare, stonando molto.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(pestando con una mano la tastiera)</em> No, no! Così è troppo male.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(trattenendo la mano di Clotilde sulla tastiera)</em> Ma è la vostra mano che guasta la mia musica, ed io voglio punire questa perfida mano incantevole. <em class="italics">(Glie l'afferra e furiosamente gliela bacia più volte.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(alzandosi con sdegno ostentato)</em> Signor Federico!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(umile e compunto, alzandosi anche lui)</em> Signora Clotilde!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Voi dimenticate i vostri doveri!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="80" id="page-80"></span><span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Certamente!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Voi abusate dell'ospitalità!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Certamente!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Voi tradite l'amicizia!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Certamente!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Voi siete un mostro!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Certamente!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">E ne siete pentito?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Neanche per sogno!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Pausa.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="81" id="page-81"></span><span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Federico!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Clo... Clo....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Cos'è «clo clo»?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">No.... Volevo dire: «Clo...tilde».</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con curiosità genuina)</em> Si può sapere perchè mi amate?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(dopo qualche istante di riflessione)</em> Non lo so.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Ora ve lo dico io: perchè sono la moglie del vostro più caro amico. Credete a me, è una specie di fatalità. Moglie, marito ed amico intimo, ecco i tre personaggi che presentano una serie infinita di combinazioni comiche e tragiche, e che dànno alla storia dell'amore il maggior contingente quotidiano. Se si hanno dinanzi due amici indivisibili, l'uno celibe e l'altro ammogliato, si può ciecamente, <span class="invisible pageno target" title="82" id="page-82"></span>novantanove volte su cento, invidiare il celibe e compiangere l'ammogliato. Notate: ho detto che si può invidiare il celibe novantanove volte su cento; non ho detto cento volte su cento, per rendere omaggio a voi, che nessuno, in fede mia, potrebbe invidiare. In fondo, gli è che siete una pasta eccezionale di amico intimo. E anzi... io scommetterei....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Scommettereste?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Che andrete immediatamente a raccontare a mio marito....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Che cosa?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Che mi avete baciata la mano... con una certa violenza.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">E se glielo raccontassi davvero?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Io... non me ne sorprenderei, ed egli... non vi crederebbe. Del resto, concludiamo. Si tratta o di <span class="invisible pageno target" title="83" id="page-83"></span>confermare la disgraziata dichiarazione che mi avete fatta per mezzo di lui o di smentirla e... di riabilitarvi. Se dichiarate d'amarmi ancora, dovete partire; se dichiarate di non amarmi più, potete restare. Decidete, dunque, e rispondetemi subito: dopo il colloquio che abbiamo avuto, mi amate ancora o non mi amate più?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(raccapezzandosi e irradiandosi)</em> Ebbene... ho deciso. <em class="italics">(Entusiasticamente prorompe:)</em> Io non vi amo, non vi amo, non vi amo!</p>
+      </div>
+      <div class="level-3 section" id="scena-vi">
+        <h3 class="center level-3 pfirst section-title title with-subtitle">SCENA VI.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="giulio-clotilde-e-federico">GIULIO, CLOTILDE <em class="italics">e</em> FEDERICO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(entrando dal giardino e avanzandosi con gioia)</em> Che sento! Questo è un grido di vittoria.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Vittoria completa! Guarigione istantanea! Egli resta.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con trasporto)</em> Ah sì! Resto!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Ti avevo promesso che gli avrei abbassata la temperatura? Bell'e fatto!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="84" id="page-84"></span><span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a Federico, canzonandolo)</em> Ti ha abbassata la temperatura?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Sotto zero!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(celiando, a Clotilde)</em> Ma, demonietto d'un dottore, come hai potuto guarirlo così presto?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Eh, caro mio, noi donne sappiamo... dove mettere le mani.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a Federico)</em> Te lo dicevo io! Che donnina è mia moglie!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst">Meravigliosa!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst">Io non ho fatto che il mio dovere, e voi, signor Federico, andate subito a depositare di nuovo le valige nella vostra stanzetta.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(afferrando le valige, tutto gaio e brillante)</em> Ma lo servo io! Lo servo io! <em class="italics">(Corre dentro.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="85" id="page-85"></span><span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(profittando dell'assenza di Giulio, in un momento di slancio, dice appassionatamente a Clotilde:)</em> Clotilde, io vi adoro!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con un rapido gesto, gli rimprovera l'imprudenza.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Giulio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ritornando in fretta, sente la dichiarazione appassionata, ma, senza sospettare di nulla, esclama, ridendo:)</em> Ah burlone! burlone! Volevi farmi paura con quel tuo «vi adoro!»; ma non ci sei riuscito! No, non ci sei riuscito!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span> <em class="italics">e</em> <span class="small-caps">Clotilde</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(celando l'imbarazzo e la sorpresa, si guardano tra loro e guardano Giulio.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Federico</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(sforzandosi, finge di ridere della burletta.)</em></p>
+        <p class="pnext"><em class="italics">(Poi ride anche Clotilde. Poi Giulio ride più forte di lei, Federico ride più forte di lei e di lui, e, ridendo ognuno più forte dell'altro, ridono clamorosamente ed esageratamente tutti e tre.)</em></p>
+        <div class="vspace" style="height: 2em"></div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Sipario.)</span>
+          </div>
+        </div>
+        <div class="vspace" style="height: 5em"></div>
+        <div class="backmatter"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
